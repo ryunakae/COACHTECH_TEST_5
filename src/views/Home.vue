@@ -1,18 +1,45 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ul>
+      <li>
+        <router-link :to="{ name: 'Member', params: { id: 1 } }">
+          １へ進む
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'Member', params: { id: 2 } }">
+          ２へ進む
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'Member', params: { id: 3 } }">
+          ３へ進む
+        </router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
-  }
+  },
+  // data () {
+  //   return {
+  //     id: []
+  //   }
+  // }
 }
 </script>
+
+<style scoped>
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+</style>
